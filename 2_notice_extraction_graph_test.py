@@ -1,8 +1,10 @@
 from graphs.notice_extraction import NOTICE_EXTRACTION_GRAPH
 from example_emails import EMAILS
 
+photos_directory = "photos/"
+
 image_data = NOTICE_EXTRACTION_GRAPH.get_graph().draw_mermaid_png() # State graph visualization
-with open("notice_extraction_graph.png", mode="wb") as f:
+with open(f"{photos_directory}/notice_extraction_graph.png", mode="wb") as f:
     f.write(image_data)
 
 initial_state = {
